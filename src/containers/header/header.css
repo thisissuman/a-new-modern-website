@@ -34,6 +34,35 @@
     display: flex;
 }
 
+/* Add this style for the popup animation */
+@keyframes popupAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.gpt3__header-content__input button {
+    /* Your existing button styles go here */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add smooth transition */
+}
+
+/* Apply the animation on button click */
+.gpt3__header-content__input button:active {
+    animation: popupAnimation 0.3s ease;
+    transform: scale(1.2); /* Initial scaling on click */
+}
+
 .gpt3__header-content__input input {
     flex: 2;
     width: 100%;
@@ -46,6 +75,7 @@
     padding: 0 1rem;
     outline: #fff;
     border-radius: 0px 5px 5px 0px;
+    color: white;
 }
 
 .gpt3__header-content__input button {
@@ -134,6 +164,7 @@
      .gpt3__header-content__input input {
         font-size: 16px;
         line-height: 24px;
+        
 
      } 
    }
